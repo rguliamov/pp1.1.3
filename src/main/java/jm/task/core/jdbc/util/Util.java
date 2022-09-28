@@ -11,6 +11,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Objects;
 
+/**
+ * вместо того, чтобы отдавать клиентскому коду Connection or Statement, мы просим клиентов
+ * сказать нам, что они хотят с ними делать, т.е. клиенты передают лямбды.
+ * Теперь мы сами управляем высвобождением ресурсов, закрывая Connection и Statement
+ */
 public class Util {
     // реализуйте настройку соеденения с БД
     @FunctionalInterface
