@@ -9,10 +9,10 @@ public class Main {
         // реализуйте алгоритм здесь
         UserService service = new UserServiceImpl();
 
+        service.dropUsersTable();
         service.createUsersTable();
 
         for (int i = 0; i < 4; i++) {
-            User user = new User();
             String name = String.format("Rustam%d", i);
             String lastName = String.format("Gulyamov%d", i);
             byte age = (byte) i;
